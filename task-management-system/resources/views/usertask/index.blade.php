@@ -39,7 +39,7 @@
         <th>Description</th> 
         <th>DueDate</th>
         <th>Status</th>
-        
+        <th class="text-center">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -49,8 +49,9 @@
         <td>{{$em->description}}</td>
         <td>{{$em->duedate}}</td>
         <td>{{$em->status}}</td>
-        
-          
+        <td class="text-center">
+                            <a href="{{ url('usertask/' . $em->id . '/edit') }}" class="btn btn-sm btn-primary">EDIT</a>
+                           
         </td>
       </tr>
       @empty
@@ -63,4 +64,3 @@
 </div>
 
 
-@endsection
