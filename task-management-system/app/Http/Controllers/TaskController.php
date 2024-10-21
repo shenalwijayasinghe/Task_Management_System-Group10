@@ -39,4 +39,5 @@ class TaskController extends Controller
         $usertask = Usertask::findOrFail($id); 
         return $usertask->delete(); 
     } 
+    
 }
