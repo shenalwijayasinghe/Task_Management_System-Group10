@@ -23,30 +23,5 @@ class TaskController extends Controller
         return redirect('usertask')->with('success', 'Task created successfully'); 
     } 
  
-    public function all() 
-    { 
-        return Usertask::all(); 
-    } 
- 
-    public function get($id) 
-    { 
-        return Usertask::findOrFail($id); 
-    } 
- 
-    public function edit($id) 
-    { 
-        return Usertask::findOrFail($id); 
-    } 
- 
-    public function update(Request $request, $id) 
-    { 
-        $usertask = Usertask::findOrFail($id); 
-        return $usertask->update($request->all()); 
-    } 
- 
-    public function delete($id) 
-    { 
-        $usertask = Usertask::findOrFail($id); 
-        return $usertask->delete(); 
-    } 
+     
 }
