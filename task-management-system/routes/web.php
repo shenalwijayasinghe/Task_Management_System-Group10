@@ -10,12 +10,12 @@ use App\Models\Usertask;
 
 Route::get('usertask', [TaskController::class, 'index']);
 Route::get('usertask/create', [TaskController::class, 'create']);
-
+Route::get('usertask/{id}/edit', [TaskController::class, 'edit']); 
 
 Route::post('usertask/store', [TaskController::class, 'store']); 
 Route::get('usertask/all', [TaskController::class, 'all']);
+Route::get('usertask/{id}/get', [TaskController::class, 'get']); 
 
 
-Route::get('usertask/{id}/edit', [TaskController::class, 'edit']); 
-Route::post('usertask/{id}', [TaskController::class, 'update']); 
-Route::delete('usertask/{id}', [TaskController::class, 'delete']); 
+Route::post('usertask/update/{id}', [TaskController::class, 'update']); 
+Route::delete('usertask/delete/{id}', [TaskController::class, 'delete']); 
