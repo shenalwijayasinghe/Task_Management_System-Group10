@@ -9,10 +9,11 @@ use App\Models\Usertask;
 class TaskController extends Controller
 {
     
-    public function index(){
-        $usertasks=Usertask::all();
-        return view('usertask.index',compact('usertasks'));
-    }
+    public function delete($id) 
+    { 
+        $usertask = Usertask::findOrFail($id); 
+        return $usertask->delete(); 
+    } 
     //
   
 }
