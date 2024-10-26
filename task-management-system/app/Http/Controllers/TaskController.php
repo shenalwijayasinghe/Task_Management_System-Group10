@@ -7,7 +7,7 @@ use App\Http\Requests\StoreTaskRequest;
 use App\Models\Usertask;
 
 class TaskController extends Controller
-{
+{ //delete
     
     public function delete($id) 
     { 
