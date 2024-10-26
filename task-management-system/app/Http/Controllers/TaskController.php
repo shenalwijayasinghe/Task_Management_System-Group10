@@ -7,6 +7,17 @@ use App\Http\Requests\StoreTaskRequest;
 use App\Models\Usertask;
 
 class TaskController extends Controller
+
+{ 
+
+        
+    public function delete($id) 
+    { 
+        $usertask = Usertask::findOrFail($id); 
+        return $usertask->delete(); 
+    } 
+    //Delete
+
 {
 
     //Update
@@ -15,6 +26,7 @@ class TaskController extends Controller
         $usertask = Usertask::findOrFail($id); 
         return $usertask->update($request->all()); 
     }
+
   
 
 
