@@ -14,5 +14,5 @@ class TaskController extends Controller
         return view('usertask.index',compact('usertasks'));
     }
     
-  
+  //
 }
