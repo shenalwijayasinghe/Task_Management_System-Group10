@@ -13,6 +13,6 @@ class TaskController extends Controller
         $usertasks=Usertask::all();
         return view('usertask.index',compact('usertasks'));
     }
-    //
+    
   
 }
