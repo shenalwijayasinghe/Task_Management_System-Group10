@@ -14,14 +14,4 @@ class TaskController extends Controller
         return view('usertask.index',compact('usertasks'));
     }
 
-    public function create(){
-        return view('usertask.create');
-    }
-    public function store(StoreTaskRequest $request) 
-    { 
-        Usertask::create($request->validated());
-        return redirect('usertask')->with('success', 'Task created successfully'); 
-    } 
- 
-     
 }
