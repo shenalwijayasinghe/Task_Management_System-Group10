@@ -25,6 +25,5 @@ class TaskController extends Controller
         return view('usertask.edit', compact('usertask')); 
     }
 
-    
 }
 
