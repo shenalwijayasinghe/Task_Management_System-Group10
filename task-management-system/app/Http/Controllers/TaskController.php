@@ -18,7 +18,7 @@ class TaskController extends Controller
     } 
     //Delete
 
-{
+
 
     //Update
     public function update(Request $request, $id) 
