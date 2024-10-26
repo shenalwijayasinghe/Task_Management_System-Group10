@@ -9,11 +9,6 @@ use App\Models\Usertask;
 class TaskController extends Controller
 {
     
-    public function index(){
-        $usertasks=Usertask::all();
-        return view('usertask.index',compact('usertasks'));
-    }
-
     public function create(){
         return view('usertask.create');
     }
@@ -23,5 +18,5 @@ class TaskController extends Controller
         return redirect('usertask')->with('success', 'Task created successfully'); 
     } 
  
-     
+
 }
