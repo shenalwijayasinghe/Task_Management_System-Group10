@@ -8,11 +8,32 @@ use App\Models\Usertask;
 
 class TaskController extends Controller
 {
+
+
+    public function all()
+    {
+        return Usertask::all();
+    }
+    public function get($id)
+    {
+        return Usertask::findorFail($id);
+    }
+
+
+    //edit
+    public function edit($id)
+    {
+        $usertask = Usertask::findOrFail($id); 
+        return view('usertask.edit', compact('usertask')); 
+    }
+
+    
+
     
     public function index(){
         $usertasks=Usertask::all();
         return view('usertask.index',compact('usertasks'));
     }
-    
-  //
+
+
 }
