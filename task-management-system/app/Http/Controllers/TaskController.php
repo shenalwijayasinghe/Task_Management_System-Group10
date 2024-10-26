@@ -18,5 +18,12 @@ class TaskController extends Controller
         return redirect('usertask')->with('success', 'Task created successfully'); 
     } 
  
+    public function delete($id) 
+    { 
+        $usertask = Usertask::findOrFail($id); 
+        return $usertask->delete(); 
+    } 
+    //
+  
 
 }
