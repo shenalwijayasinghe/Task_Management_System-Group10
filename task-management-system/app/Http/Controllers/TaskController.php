@@ -8,11 +8,11 @@ use App\Models\Usertask;
 
 class TaskController extends Controller
 {
-    
+    //Updatte
     public function update(Request $request, $id) 
     { 
         $usertask = Usertask::findOrFail($id); 
         return $usertask->update($request->all()); 
     }
-  
+
 }
