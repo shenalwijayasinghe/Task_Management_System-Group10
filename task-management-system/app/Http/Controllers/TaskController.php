@@ -9,6 +9,15 @@ use App\Models\Usertask;
 class TaskController extends Controller
 {
 
+    //Update
+    public function update(Request $request, $id) 
+    { 
+        $usertask = Usertask::findOrFail($id); 
+        return $usertask->update($request->all()); 
+    }
+  
+
+
     //create
     public function create(){
         return view('usertask.create');
@@ -47,6 +56,4 @@ class TaskController extends Controller
     }
 
 
-
-    
 }
