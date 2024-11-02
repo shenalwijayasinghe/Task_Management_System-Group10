@@ -18,7 +18,6 @@ class TaskController extends Controller
     } 
     //Delete
 
-{
 
     //Update
     public function update(Request $request, $id) 
@@ -27,7 +26,7 @@ class TaskController extends Controller
         return $usertask->update($request->all()); 
     }
 
-  
+
 
 
     //create
