@@ -10,13 +10,14 @@ class TaskController extends Controller
 
 { 
 
-        
+       
     public function delete($id) 
     { 
         $usertask = Usertask::findOrFail($id); 
         return $usertask->delete(); 
     } 
     //Delete
+
 
 
     //Update
