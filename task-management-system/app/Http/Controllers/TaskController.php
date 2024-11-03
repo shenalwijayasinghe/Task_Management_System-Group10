@@ -8,8 +8,8 @@ use App\Models\Usertask;
 
 class TaskController extends Controller
 
-{ 
 
+{
         
     public function delete($id) 
     { 
@@ -18,7 +18,6 @@ class TaskController extends Controller
     } 
     //Delete
 
-{
 
     //Update
     public function update(Request $request, $id) 
