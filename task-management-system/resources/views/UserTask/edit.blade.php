@@ -4,7 +4,7 @@
 <div class="card mt-5">
   <h2 class="card-header text-primary">Edit Task</h2>
   <div class="card-body">
-  <form action="{{url('UserTask/update/' . $usertask->id) }}" method="POST">
+  <form action="{{url('usertask/update/' . $usertask->id) }}" method="POST">
 
   @csrf
 
