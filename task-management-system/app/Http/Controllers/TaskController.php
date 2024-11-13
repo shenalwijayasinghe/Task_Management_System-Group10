@@ -10,13 +10,13 @@ class TaskController extends Controller
 
 
 {
-        
     public function delete($id) 
     { 
         $usertask = Usertask::findOrFail($id); 
         return $usertask->delete(); 
     } 
     //Delete
+
 
 
     //Update
@@ -26,7 +26,7 @@ class TaskController extends Controller
         return $usertask->update($request->all()); 
     }
 
-  
+
 
 
     //create
@@ -64,6 +64,13 @@ class TaskController extends Controller
     public function index(){
         $usertasks=Usertask::all();
         return view('usertask.index',compact('usertasks'));
+    }
+
+    //show
+    public function show()
+    {
+        $usertasks=Usertask::all();
+        return view('usertask.show',compact('usertasks')); 
     }
 
 
